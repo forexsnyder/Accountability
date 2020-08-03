@@ -4,8 +4,7 @@ Accountability App
 Description:
 Accomplish your goals.  Sign up with a coach to follow up about your goals. Set a monthly goal, then break it in to weekly goals.  Break those weekly goals into three daily actions.  Your coach will see your progress and keep you accountable.  
 
-Database:
-
+Airtable Columns:
 
 ![Airtable](https://github.com/forexsnyder/Accountability/blob/master/Images/Airtable.png)
 
@@ -21,7 +20,7 @@ Wireframe:
 
 MVP:
 
-Login
+Login Page (fake credentials)
 
 Landing Page for clients and managers.
 
