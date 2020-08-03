@@ -7,6 +7,10 @@ Database:
 
 
 Wireframe:
+
+
+
+
 ![Wireframe](https://github.com/forexsnyder/Accountability/blob/master/App%20Diagram.png)
 
 MVP:
