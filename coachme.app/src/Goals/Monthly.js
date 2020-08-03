@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from "react";
 import axios from "axios"
-import './Goalstyles.css';
+import './Goals.css';
 
 function MonthlyGoals() {
   const [goals, updateGoals] = useState([]);

@@ -12,8 +12,8 @@ function Login() {
         <img src={Poster} alt="demotivational poster"></img>
         </div>
         <div className="buttons">
-            <Link to="/Which">Login</Link>
-            <Link to={"/SignUpForm"}>Sign Up</Link>
+            <Link to="/which">Login</Link>
+            <Link to="/signupform">Sign Up</Link>
         </div>
     </div>
   );

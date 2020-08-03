@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from "react";
 import axios from "axios"
 import { Link, Route } from "react-router-dom";
-import './Goalstyles.css';
+import './Goals.css';
 
 function DailyGoals() {
   const [goals, updateGoals] = useState([]);

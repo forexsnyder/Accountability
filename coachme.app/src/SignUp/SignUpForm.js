@@ -6,6 +6,7 @@ function SignUpForm() {
     //Create Form
   return (
     <div className="App">
+        <h1>Signup form</h1>
     </div>
   );
 }
