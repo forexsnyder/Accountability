@@ -54,4 +54,4 @@ Priority Matrix:
 Daily Schedule:
 
 
-![Wireframe](https://github.com/forexsnyder/Accountability/blob/master/Images/Daily%20Schedule.png)
+![Wireframe](https://github.com/forexsnyder/Accountability/blob/master/Images/Daily%20schedule.png)
