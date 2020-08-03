@@ -10,4 +10,5 @@ Client landing page
 
 Coach landingpage
 
-(https://github.com/forexsnyder/Accountability/blob/master/Images/Coach%20Landingpage.png)
+
+![Coach](https://github.com/forexsnyder/Accountability/blob/master/Images/Coach%20Landingpage.png)
