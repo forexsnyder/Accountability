@@ -16,11 +16,11 @@ function App() {
     <div className="App">
 
       <div>
-        <Route path="/" component={Login} exact />
-        <Route path="/which" component={Which}/>
-        <Route path="/signupform" component={SignUpForm} />
-        <Route path="/clientlandingpage" component={ClientHomepage} />
-        <Route path="/coachlandingpage"  component={CoachHomepage} />
+        <Route path ="/" component={Login} exact />
+        <Route path ="/which" component={Which}/>
+        <Route path ="/signupform" component={SignUpForm} />
+        <Route path ="/clientlandingpage" component={ClientHomepage} />
+        <Route path ="/coachlandingpage"  component={CoachHomepage} />
         <Route path ="/dailygoals" component={DailyGoals} />
         <Route path ="/weekygoals" component={WeeklyGoals} />
         <Route path ="/monthlygoals" component={MonthlyGoals} />
