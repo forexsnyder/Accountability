@@ -37,3 +37,8 @@ Manager:
 3. See goals of clients.
 4. Modify goals.
 5. Set appointments.
+
+Post MVP:
+Authentication
+Upgrade database to MongoDB
+React Native
