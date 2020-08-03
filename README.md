@@ -39,6 +39,9 @@ Manager:
 5. Set appointments.
 
 Post MVP:
-Authentication
-Upgrade database to MongoDB
-React Native
+
+1. Authentication
+
+2. Upgrade database to MongoDB
+
+3. Deploy in React Native
