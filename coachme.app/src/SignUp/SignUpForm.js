@@ -1,6 +1,6 @@
-import React, { useState }from './node_modules/react';
+import React, { useState }from 'react';
 import './SignUpForm.css';
-import axios from "./node_modules/axios";
+import axios from "axios";
 
 function SignUpForm() {
     //Create Form
