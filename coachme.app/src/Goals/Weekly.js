@@ -1,5 +1,5 @@
-import React,{ useEffect, useState } from "react";
-import axios from "axios"
+import React,{ useEffect, useState } from "./node_modules/react";
+import axios from "./node_modules/axios"
 import './Goals.css';
 
 function WeeklyGoals() {
