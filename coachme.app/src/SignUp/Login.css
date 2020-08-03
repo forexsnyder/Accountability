@@ -1,9 +1,14 @@
+body{
+    background-color: grey;
+}
+
 .poster{
+    background-color: grey;
 
 
 }
 
 .buttons{
+    color: blue;
 
-    
 }
