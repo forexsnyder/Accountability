@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link, Route } from "react-router-dom";
 import Poster from"./Poster.jpg";
 import './Login.css';
+import SignUpForm from './SignUpForm';
+import Which from "./Which";
 
 function Login() {
   return (
@@ -9,12 +12,9 @@ function Login() {
         <img src={Poster} alt="demotivational poster"></img>
         </div>
         <div className="buttons">
-            <button>Login</button>
-            <button>Sign up</button>
-
+            <Link to="/Which">Login</Link>
+            <Link to={"/SignUpForm"}>Sign Up</Link>
         </div>
-        
-
     </div>
   );
 }
