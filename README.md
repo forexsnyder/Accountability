@@ -46,3 +46,12 @@ Post MVP:
 2. Upgrade database to MongoDB
 
 3. Deploy in React Native
+
+Priority Matrix:
+
+![Wireframe](https://github.com/forexsnyder/Accountability/blob/master/Images/Priority%20Matrix.png)
+
+Daily Schedule:
+
+
+![Wireframe](https://github.com/forexsnyder/Accountability/blob/master/Images/Daily%20Schedule.png)
