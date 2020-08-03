@@ -1,4 +1,5 @@
-Title:Accountability App powered by React
+Title:
+Accountability App 
 
 Description:
 Accomplish your goals.  Sign up with a coach to follow up about your goals. Set a monthly goal, then break it in to weekly goals.  Break those weekly goals into three daily actions.  Your coach will see your progress and keep you accountable.  
