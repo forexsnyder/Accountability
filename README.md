@@ -6,14 +6,14 @@ Accomplish your goals.  Sign up with a coach to follow up about your goals. Set 
 Database:
 
 
-![Airtable](https://github.com/forexsnyder/Accountability/blob/master/Airtable.png)
+![Airtable](https://github.com/forexsnyder/Accountability/blob/master/Images/Airtable.png)
 
 Wireframe:
 
 
 
 
-![Wireframe](https://github.com/forexsnyder/Accountability/blob/master/App%20Diagram.png)
+![Wireframe](https://github.com/forexsnyder/Accountability/blob/master/Images/App%20Diagram.png)
 
 MVP:
 
