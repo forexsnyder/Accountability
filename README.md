@@ -27,9 +27,9 @@ Landing Page for clients and managers.
 Client:
 
 1. Navigate Monthly, Weekly, Daily Goals.
-2. Modify goals.
-3. Set appointments
-4. 
+2. Set goals.
+3. Set appointments.
+4. Modify goals.
 
 Manager:
 1. Add Clients
