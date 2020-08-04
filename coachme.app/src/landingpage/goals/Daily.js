@@ -1,8 +1,9 @@
 import React,{ useEffect, useState } from "react";
 import axios from "axios"
+import { Link, Route } from "react-router-dom";
 import './Goals.css';
 
-function MonthlyGoals() {
+function DailyGoals() {
   const [goals, updateGoals] = useState([]);
 
   useEffect(() => {
@@ -22,38 +23,37 @@ function MonthlyGoals() {
   }, []);
 
 
-  return <div className="goal-box">
+  return <div className="goal-div">
     <div className="header">
-    <h2>Monthly Goals</h2>
-    <button>Add New Goal</button>
-    </div>
-    <div>
-    {goals.map((goal)=>{
-      return(
-      <h2>{goal.fields.MonthlyGoal1}</h2>
-      );
-    })}
-    <button>Completed</button>
-    </div>
-    <div>
-    {goals.map((goal)=>{
-      return(
-      <h2>{goal.fields.MonthlyGoal2}</h2>
-      );
-    })}
-    <button>Completed</button>
-    </div>
-    <div>
-    {goals.map((goal)=>{
-      return(
-      <h2>{goal.fields.MonthlyGoal3}</h2>
-      );
-    })}
-    <button>Completed</button>
+      <h2>Daily Goals</h2>
+      <button className="add-new">Add New Goal</button>
     </div>
     
-
-
+    <div className="goal-box">
+    {goals.map((goal)=>{
+      return(
+      <h2>{goal.fields.DailyGoal1}</h2>
+      );
+    })}
+    <button className="completed">Completed</button>
+    </div>
+    <div className="goal-box">
+    {goals.map((goal)=>{
+      return(
+      <h2>{goal.fields.DailyGoal2}</h2>
+      );
+    })}
+    <button className="completed">Completed</button>
+    </div>
+    <div className="goal-box">
+    {goals.map((goal)=>{
+      return(
+      <h2>{goal.fields.DailyGoal3}</h2>
+      );
+    })}
+    <button className="completed">Completed</button>
+    </div>
+    <Link to="/clientlandingpage">Client</Link>
   </div>
 
 
@@ -62,4 +62,4 @@ function MonthlyGoals() {
 
 }
 
-export default MonthlyGoals;
+export default DailyGoals;

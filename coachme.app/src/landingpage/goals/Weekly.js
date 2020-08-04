@@ -1,8 +1,9 @@
 import React,{ useEffect, useState } from "react";
 import axios from "axios"
+import { Link, Route } from "react-router-dom";
 import './Goals.css';
 
-function WeeklyGoals() {
+function DailyGoals() {
   const [goals, updateGoals] = useState([]);
 
   useEffect(() => {
@@ -22,36 +23,37 @@ function WeeklyGoals() {
   }, []);
 
 
-  return <div className="goal-box">
+  return <div className="goal-div">
     <div className="header">
-    <h2>Weekly Goals</h2>
-    <button>Add New Goal</button>
+      <h2>Weekly Goals</h2>
+      <button className="add-new">Add New Goal</button>
     </div>
-    <div>
+    
+    <div className="goal-box">
     {goals.map((goal)=>{
       return(
       <h2>{goal.fields.WeeklyGoal1}</h2>
       );
     })}
-    <button>Completed</button>
+    <button className="completed">Completed</button>
     </div>
-    <div>
+    <div className="goal-box">
     {goals.map((goal)=>{
       return(
       <h2>{goal.fields.WeeklyGoal2}</h2>
       );
     })}
-    <button>Completed</button>
+    <button className="completed">Completed</button>
     </div>
-    <div>
+    <div className="goal-box">
     {goals.map((goal)=>{
       return(
       <h2>{goal.fields.WeeklyGoal3}</h2>
       );
     })}
-    <button>Completed</button>
+    <button className="completed">Completed</button>
     </div>
-
+    <Link to="/clientlandingpage">Client</Link>
   </div>
 
 
@@ -60,4 +62,4 @@ function WeeklyGoals() {
 
 }
 
-export default WeeklyGoals;
+export default DailyGoals;

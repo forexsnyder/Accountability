@@ -2,7 +2,7 @@ import React,{ useEffect, useState } from "react";
 import axios from "axios";
 import "./Apt.css";
 
-function Apt() {
+function Appointments() {
   const [apts, updateApts] = useState([]);
 
   useEffect(() => {
@@ -42,4 +42,4 @@ function Apt() {
     </div>
   );
 }
-export default Apt;
+export default Appointments;

@@ -1,13 +1,16 @@
 
 import { Link, Route } from "react-router-dom";
-// import DailyGoals from "./Timeframe/DailyGoals";
-// import WeeklyGoals from "./Timeframe/WeeklyGoals";
-// import MonthlyGoals from "./Timeframe/MonthlyGoals";
+import DailyGoals from "./goals/Daily";
+import WeeklyGoals from "./goals/Weekly";
+import MonthlyGoals from "./goals/Monthly";
+import Appointments from './appointments/Appointments';
 import React,{ useEffect, useState } from "react";
 import axios from "axios"
+import "./Landingpage.css"
 
 function ClientHomepage() {
-    const [goals, updateGoals] = useState([]);
+  const [goals, updateGoals] = useState([]);
+  
 
   useEffect(() => {
     const apiCall = async () => {
@@ -26,15 +29,43 @@ function ClientHomepage() {
   }, []);
 
 
-
-
-
   return (
     <div className="App">
       <div className="goals-box">
         <h1>Client Home page</h1>
         <div className="time-frame">
-          {/* <DailyGoals /> */}
+          <Link to="/monthlygoals">Monthly</Link>
+          <Link to="/weeklygoals">Weekly</Link>
+          <Link to="/dailygoals">Daily</Link>
+        </div>
+
+        <div className="overview-div">
+        <div className="overview-box1">
+          <h1>Monthly Goal:</h1>
+          {goals.map((goal)=>{
+          return(
+            <h2>{goal.fields.MonthlyGoal1}</h2>
+            );
+          })}
+          </div>
+          <div className="overview-box2">
+          <h1>Weekly Goal:</h1>
+          {goals.map((goal)=>{
+          return(
+            <h2>{goal.fields.WeeklyGoal1}</h2>
+            );
+          })}
+        
+        </div>
+        </div>
+
+
+        <div className="goals-div">
+          <DailyGoals />
+        </div>
+        
+        <div>
+          <Appointments />
         </div>
     </div>
     </div>
