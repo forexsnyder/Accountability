@@ -6,7 +6,8 @@ import React,{ useEffect, useState } from "react";
 import axios from "axios"
 
 function CoachHomepage() {
-    const [goals, updateGoals] = useState([]);
+  const [goals, updateGoals] = useState([]);
+  const [apts, updateApts] = useState([]);
 
   useEffect(() => {
     const apiCall = async () => {
@@ -23,7 +24,23 @@ function CoachHomepage() {
     };
     apiCall();
   }, []);
+ 
 
+  useEffect(() => {
+    const apiCall2 = async () => {
+      const appointment = await axios.get(
+        "https://api.airtable.com/v0/appjseX2kf4ig80GF/Table%201?view=Grid%20view",
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
+          },
+        }
+      );
+      updateApts(appointment.data.records);
+      console.log(appointment.data.records);
+    };
+    apiCall2();
+  }, []);
 
 
 
@@ -33,7 +50,19 @@ function CoachHomepage() {
       <div className="goals-box">
       <h1>Coach Home page</h1>
         <div className="time-frame">
-          {/* <DailyGoals /> */}
+        {goals.map((goal)=>{
+      return(
+      <h2>{goal.fields.Name}</h2>
+      );
+    })}
+        {apts.map((appointments)=>{
+          return(
+            <div>
+              <h2>{appointments.fields.Daytime}</h2>
+              <h2>{appointments.fields.Date}</h2>
+            </div>
+          );
+        })}
         </div>
     </div>
     </div>
