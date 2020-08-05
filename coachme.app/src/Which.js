@@ -10,15 +10,16 @@ function Which(props) {
   useEffect(() => {
     const apiCall = async () => {
       const data = await axios.get(
-        "https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Table%201?view=Grid%20view",
+        "https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Clients?view=Grid%20view",
         {
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
           },
         }
       );
+      console.log(data);
       updateClients(data.data.records);
-      console.log(data.data.records);
+      
     };
     apiCall();
   }, []);

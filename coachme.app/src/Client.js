@@ -17,7 +17,7 @@ function ClientHomepage(props) {
   useEffect(() => {
     const apiCall = async () => {
       const data = await axios.get(
-        `https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Table%201/${params.id}`,
+        `https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Clients/${params.id}`,
         {
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
