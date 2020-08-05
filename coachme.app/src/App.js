@@ -1,29 +1,38 @@
-import React from "react";
-import Login from "./signup/Login";
+import React, { useState } from "react";
+import Login from "./Login";
 import "./App.css";
-import Which from "./signup/Which";
-import SignUpForm from "./signup/SignUpForm";
-import ClientHomepage from "./landingpage/Client";
-import CoachHomepage from "./landingpage/Coach";
-import DailyGoals from "./landingpage/goals/Daily";
-import WeeklyGoals from "./landingpage/goals/Weekly";
-import MonthlyGoals from "./landingpage/goals/Monthly";
-import Appointments from "./landingpage/appointments/Appointments";
+import Which from "./Which";
+import SignUpForm from "./SignUpForm";
+import ClientHomepage from "./Client";
+import CoachHomepage from "./Coach";
+import DailyGoals from "./Daily";
+import WeeklyGoals from "./Weekly";
+import MonthlyGoals from "./Monthly";
+import Appointments from "./Appointments";
 import { Route } from "react-router-dom";
 
 function App() {
+// const[newGoal,updateNewGoal] = useState(false)
+
   return (
     <div className="App">
       <div>
         <Route path="/" component={Login} exact />
         <Route path="/which" component={Which} />
-        <Route path="/signupform" component={SignUpForm} />
-        <Route path="/clientlandingpage" component={ClientHomepage} />
-        <Route path="/coachlandingpage" component={CoachHomepage} />
-        <Route path="/dailygoals" component={DailyGoals} />
+        <Route path="/signupform/" component={SignUpForm} />
+        <Route path="/clientlandingpage/:id">
+          <ClientHomepage />
+        </Route>
+        {/* <Route path="/clientlandingpage/:id" component={ClientHomepage}/> */}
+        <Route path="/coachlandingpage/:id">
+          <CoachHomepage />
+        </Route>
+        {/* <Route path="/dailygoals/:id">
+          <DailyGoals />
+        </Route>
         <Route path="/weeklygoals" component={WeeklyGoals} />
         <Route path="/monthlygoals" component={MonthlyGoals} />
-        <Route path="/appointments" component={Appointments} />
+        <Route path="/appointments" component={Appointments} /> */}
       </div>
     </div>
   );
