@@ -55,10 +55,10 @@ function Which(props) {
       </div>
       <div>
         <h1>Coaches</h1>
-        {coaches.map((coaches) => {
+        {coaches.map((coach) => {
           return (
-            <Link to={`/coachlandingpage/${coaches.id}`}>
-              <h2>{coaches.fields.Coach}</h2>
+            <Link to={`/coachlandingpage/${coach.id}`}>
+              <h2>{coach.fields.Coach}</h2>
             </Link>
           );
         })}

@@ -5,34 +5,37 @@ import Which from "./Which";
 import SignUpForm from "./SignUpForm";
 import ClientHomepage from "./Client";
 import CoachHomepage from "./Coach";
-import DailyGoals from "./Daily";
-import WeeklyGoals from "./Weekly";
-import MonthlyGoals from "./Monthly";
-import Appointments from "./Appointments";
+// import DailyGoals from "./Daily";
+// import WeeklyGoals from "./Weekly";
+// import MonthlyGoals from "./Monthly";
+// import Appointments from "./Appointments";
 import { Route } from "react-router-dom";
 
 function App() {
-// const[newGoal,updateNewGoal] = useState(false)
+const[fetchClients,updateFetchClients] = useState(false)
 
   return (
     <div className="App">
       <div>
         <Route path="/" component={Login} exact />
-        <Route path="/which" component={Which} />
-        <Route path="/signupform/" component={SignUpForm} />
+        <Route path="/which">
+          <Which
+            fetchClients={fetchClients}
+          />
+        </Route>
+        <Route path="/signupform/">
+          <SignUpForm
+            fetchClients={fetchClients}
+            updateFetchClients={updateFetchClients}
+          />
+        </Route>
         <Route path="/clientlandingpage/:id">
           <ClientHomepage />
         </Route>
-        {/* <Route path="/clientlandingpage/:id" component={ClientHomepage}/> */}
         <Route path="/coachlandingpage/:id">
           <CoachHomepage />
         </Route>
-        {/* <Route path="/dailygoals/:id">
-          <DailyGoals />
-        </Route>
-        <Route path="/weeklygoals" component={WeeklyGoals} />
-        <Route path="/monthlygoals" component={MonthlyGoals} />
-        <Route path="/appointments" component={Appointments} /> */}
+
       </div>
     </div>
   );
