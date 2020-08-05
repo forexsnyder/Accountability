@@ -99,7 +99,7 @@ Coach: coach,
       <input type="submit" value="Finish sign up" />
     </form>
     <div>
-<Link to="/which">Login</Link>
+    <Link to="/which">Login</Link>
     </div>
     </div>
   );
@@ -107,65 +107,3 @@ Coach: coach,
 
 export default SignUpForm;
 
-// import React, { useState } from "react";
-// import axios from "axios";
-// function AddRecipe(props) {
-//   const [title, updateTitle] = useState("");
-//   const [ingredients, updateIngredients] = useState("");
-//   const [steps, updateSteps] = useState("");
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const data = await axios.post(
-//       "https://api.airtable.com/v0/appTG5WL7NTOgqq7S/Table%201",
-//       {
-//         fields: {
-//           title: title,
-//           ingredients: ingredients,
-//           steps: steps,
-//         },
-//       },
-//       {
-//         headers: {
-//           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
-//           "Content-Type": "application/json",
-//         },
-//       }
-//     );
-//     props.updateFetchRecipes(!props.fetchRecipes); ///needed to pass these using props. beause needed on both component pages.
-//     updateTitle("");
-//     updateIngredients("");
-//     updateSteps("");
-//   };
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <h2>New Recipe</h2>
-//       <label htmlFor="title">Title</label>
-//       <input
-//         type="Text"
-//         id="title"
-//         onChange={(e) => updateTitle(e.target.value)}
-//         value={title}
-//       />
-//       <label htmlFor="ingredients">ingredients</label>
-//       <input
-//         type="Text"
-//         id="ingredients"
-//         onChange={(e) => updateIngredients(e.target.value)}
-//         value={ingredients}
-//       />{" "}
-//       <br />
-//       <br />
-//       <label htmlFor="steps">steps</label>
-//       <textarea
-//         name="Text"
-//         id="steps"
-//         cols="45"
-//         rows="10"
-//         onChange={(e) => updateSteps(e.target.value)}
-//         value={steps}
-//       ></textarea>
-//       <input type="submit" value="Add New Recipe" />
-//     </form>
-//   );
-// }
-// export default AddRecipe;

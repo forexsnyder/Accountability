@@ -31,8 +31,6 @@ function ClientHomepage(props) {
       updateWGoal1(data.data.fields.WeeklyGoal1);
       updateMGoal1(data.data.fields.MonthlyGoal1);
       updateClientId(data.data.id);
-      
-      // console.log(data.data.records);
     };
     apiCall();
   }, []);
@@ -41,13 +39,13 @@ console.log("line 39"+ clientId)
   return (
     <div className="App">
       <div className="goals-box">
+        <h1>Client Home page</h1>
+        <h2>Monthly Goal:{mgoal1} </h2>
+        <h2>Weekly Goal:{wgoal1}</h2>
+        <h3>Daily Goals:</h3>
         <h1>{dgoal1}</h1>
         <h1>{dgoal2}</h1>
         <h1>{dgoal3}</h1>
-        <h1>{wgoal1}</h1>
-        <h1>{mgoal1}</h1>
-        
-        <h1>Client Home page</h1>
         <div className="time-frame">
           <button>Modify Goals</button>
           <button>Set new Appointment</button>
