@@ -35,6 +35,8 @@ const[fetchClients,updateFetchClients] = useState(false)
         <Route path="/coachlandingpage/:id">
           <CoachHomepage />
         </Route>
+        {/* Modify Goals */}
+        {/* Appointments */}
 
       </div>
     </div>

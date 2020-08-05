@@ -24,7 +24,7 @@ function ClientHomepage(props) {
           },
         }
       );
-      console.log(data.data.id);
+      console.log(data)
       updateDGoal1(data.data.fields.DailyGoal1);
       updateDGoal2(data.data.fields.DailyGoal2);
       updateDGoal3(data.data.fields.DailyGoal3);
@@ -35,7 +35,6 @@ function ClientHomepage(props) {
     apiCall();
   }, []);
 
-console.log("line 39"+ clientId)
   return (
     <div className="App">
       <div className="goals-box">
@@ -49,9 +48,6 @@ console.log("line 39"+ clientId)
         <div className="time-frame">
           <button>Modify Goals</button>
           <button>Set new Appointment</button>
-          {/* <Link to={`/monthlygoals/${clientId}`}>Monthly</Link>
-          <Link to={`/weeklygoals/${clientId}`}>Weekly</Link>
-          <Link to={`/dailygoals/${clientId}`}>Daily</Link> */}
         </div>
     </div>
     </div>
