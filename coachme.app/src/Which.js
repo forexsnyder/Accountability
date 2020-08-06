@@ -28,7 +28,7 @@ function Which(props) {
   useEffect(() => {
     const apiCall = async () => {
       const data = await axios.get(
-        "https://api.airtable.com/v0/appjseX2kf4ig80GF/Table%201?view=Grid%20view",
+        "https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Coaches?view=Grid%20view",
         {
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
@@ -36,7 +36,7 @@ function Which(props) {
         }
       );
       updateCoaches(data.data.records);
-      console.log(data.data.records);
+      console.log(data);
     };
     apiCall();
   }, []);
@@ -59,7 +59,7 @@ function Which(props) {
         {coaches.map((coach) => {
           return (
             <Link to={`/coachlandingpage/${coach.id}`}>
-              <h2>{coach.fields.Coach}</h2>
+              <h2>{coach.fields.Name}</h2>
             </Link>
           );
         })}

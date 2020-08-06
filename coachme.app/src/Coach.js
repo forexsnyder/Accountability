@@ -1,76 +1,72 @@
 import { useParams } from "react-router-dom";
-import React,{ useEffect, useState } from "react";
-import axios from "axios"
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 
 function CoachHomepage(props) {
-  const [goals, updateGoals] = useState([]);
-  const [apts, updateApts] = useState([]);
-  const [client,updateClient]=useState("")
-  const params = useParams()
 
-  useEffect(() => {
-    const apiCall = async () => {
-      const data = await axios.get(
-        "https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Table%201?view=Grid%20view",
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
-          },
-        }
-      );
-      updateGoals(data.data.records);
-      console.log(data.data.records);
-    };
-    apiCall();
-  }, []);
- 
 
+  const [client, updateClient] = useState([]);
+  const [dgoal1, updateDGoal1] = useState([]);
+  const [dgoal2, updateDGoal2] = useState([]);
+  const [dgoal3, updateDGoal3] = useState([]);
+  const [wgoal1, updateWGoal1] = useState([]);
+  const [mgoal1, updateMGoal1] = useState([]);
+  const params = useParams();
+  
   useEffect(() => {
     const apiCall2 = async () => {
-      const appointment = await axios.get(
-        `https://api.airtable.com/v0/appjseX2kf4ig80GF/Table%201/${params.id}`,
+      const client = await axios.get(
+        `https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Coaches/${params.id}`,
         {
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
           },
         }
       );
-      updateApts(appointment.data.fields.Date);
-      updateClient(appointment.data.fields.Client)
-      console.log(appointment);
+
+      updateClient(client.data.fields.ClientLook);
+      updateDGoal1(client.data.fields.DGoal1);
+      updateDGoal2(client.data.fields.DGoal2);
+      updateDGoal3(client.data.fields.DGoal3);
+      updateWGoal1(client.data.fields.WGoal);
+      updateMGoal1(client.data.fields.MGoal);
+          console.log(dgoal1)
     };
     apiCall2();
+
   }, []);
-
-
-
-
-  return (
-    <div className="App">
-      <div className="goals-box">
-      <h1>Coach Home page</h1>
-        {/* <div className="time-frame">
-        {goals.map((goal)=>{
-      return(
-      <h2>{goal.fields.Name}</h2>
-      );
-        })}
-        </div> */}
-        <h1>{client}</h1>
-        <h2>{apts}</h2>
-        {/* <div>
-        {apts.map((appointments)=>{
-          return(
+  //for loop
+  if (wgoal1 !== []) {
+    return (
+      <div className="App">
+        <div className="goals-box">
+          <h1>Coach Home page</h1>
+          
             <div>
-              <h2>{appointments.fields.Daytime}</h2>
-              <h2>{appointments.fields.Date}</h2>
+              {function () {
+                let rows = []
+                for (let i = 0; i <client.length; i++) {
+                  rows.push(<div>{client[i]} <h1>Monthly Goal:{mgoal1[i]}</h1>
+                    <h2>Daily Goals:
+                      {dgoal1[i]}
+                      {dgoal2[i]}
+                      {dgoal3[i]}
+                    </h2></div>)
+                }
+                return rows
+              }()}
             </div>
-          );
-        })}
-        </div> */}
-    </div>
-    </div>
-  );
+
+          
+        </div>
+      </div>
+    );
+  } else {
+    return <h1>Loading</h1>
+}
+
+
 }
 
 export default CoachHomepage;
