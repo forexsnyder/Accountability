@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import "./SignUpForm.css";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import React,{ useEffect, useState } from "react";
+import axios from "axios"
+import { Link, useParams } from "react-router-dom";
 
-function SignUpForm(props) {
 
+function ModifyGoals(props) {
   const [name, updateName] = useState("");
   const [dGoal1, updateDGoal1] = useState("");
   const [dGoal2, updateDGoal2] = useState("");
@@ -12,12 +11,13 @@ function SignUpForm(props) {
   const [wGoal1, updateWGoal1] = useState("");
   const [mGoal1, updateMGoal1] = useState("");
   const [coach, updateCoach] = useState("recMaR6APIP9U10ih");
-
+  console.log(props)
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = await axios.patch(
-      "https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Clients",
+      `https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Clients`,
       {
+        id:{props},
         fields: {
           Name: name,
           DailyGoal1: dGoal1,
@@ -35,8 +35,7 @@ function SignUpForm(props) {
         },
       }
     );
-    ///needed to pass these using props. beause needed on both component pages.
-    props.updateFetchClients(!props.fetchClients); 
+ 
     updateDGoal1("");
     updateDGoal2("");
     updateDGoal3("");
@@ -104,10 +103,10 @@ function SignUpForm(props) {
         <input type="submit" value="Finish sign up" />
       </form>
       <div>
-        <Link to="/which">Login</Link>
+      <Link to="/clients">back to your goals</Link>
       </div>
-    </div>
+</div>
   );
 }
 
-export default SignUpForm;
+export default ModifyGoals

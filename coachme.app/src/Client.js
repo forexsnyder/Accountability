@@ -1,6 +1,6 @@
 
-import { useParams } from "react-router-dom";
-import React,{ useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import axios from "axios"
 import "./Landingpage.css"
 
@@ -12,6 +12,8 @@ function ClientHomepage(props) {
   const [mgoal1, updateMGoal1] = useState("");
   const [clientId, updateClientId] = useState("");
   const params = useParams()
+  const[show,updateShow]=useState(false)
+  
   console.log(params)
 
   useEffect(() => {
@@ -35,18 +37,20 @@ function ClientHomepage(props) {
     apiCall();
   }, []);
 
+  props.updateClientId(!props.clientId);
+  
   return (
     <div className="App">
       <div className="goals-box">
         <h1>Client Home page</h1>
-        <h2>Monthly Goal:{mgoal1} </h2><button></button>
-        <h2>Weekly Goal:{wgoal1}</h2><button></button>
+        <h2>Monthly Goal:{mgoal1} </h2><button>Completed</button>
+        <h2>Weekly Goal:{wgoal1}</h2><button>Completed</button>
         <h3>Daily Goals:</h3>
-        <h1>{dgoal1}</h1><button></button>
-        <h1>{dgoal2}</h1><button></button>
-        <h1>{dgoal3}</h1><button></button>
+        <h1>{dgoal1}</h1><button>Completed</button>
+        <h1>{dgoal2}</h1><button>Completed</button>
+        <h1>{dgoal3}</h1><button>Completed</button>
         <div className="time-frame">
-            <button>Modify Goals</button>
+        <Link to="/modifygoals">Modify Goals</Link>
         </div>
     </div>
     </div>

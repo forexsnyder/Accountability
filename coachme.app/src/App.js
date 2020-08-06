@@ -5,6 +5,7 @@ import Which from "./Which";
 import SignUpForm from "./SignUpForm";
 import ClientHomepage from "./Client";
 import CoachHomepage from "./Coach";
+import ModifyGoals from "./ModifyGoals";
 import { Route } from "react-router-dom";
 
 function App() {
@@ -26,10 +27,17 @@ const[fetchClients,updateFetchClients] = useState(false)
           />
         </Route>
         <Route path="/clientlandingpage/:id">
-          <ClientHomepage />
+          <ClientHomepage
+          clientId={clientId}
+          />
         </Route>
         <Route path="/coachlandingpage/:id">
           <CoachHomepage />
+        </Route>
+        <Route path="/modifygoals">
+          <ModifyGoals
+          clientId={clientId}
+          />
         </Route>
         {/* Modify Goals */}
         {/* Appointments */}
