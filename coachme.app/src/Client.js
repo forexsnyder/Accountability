@@ -39,15 +39,14 @@ function ClientHomepage(props) {
     <div className="App">
       <div className="goals-box">
         <h1>Client Home page</h1>
-        <h2>Monthly Goal:{mgoal1} </h2>
-        <h2>Weekly Goal:{wgoal1}</h2>
+        <h2>Monthly Goal:{mgoal1} </h2><button></button>
+        <h2>Weekly Goal:{wgoal1}</h2><button></button>
         <h3>Daily Goals:</h3>
-        <h1>{dgoal1}</h1>
-        <h1>{dgoal2}</h1>
-        <h1>{dgoal3}</h1>
+        <h1>{dgoal1}</h1><button></button>
+        <h1>{dgoal2}</h1><button></button>
+        <h1>{dgoal3}</h1><button></button>
         <div className="time-frame">
-          <button>Modify Goals</button>
-          <button>Set new Appointment</button>
+            <button>Modify Goals</button>
         </div>
     </div>
     </div>
