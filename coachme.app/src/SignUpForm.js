@@ -4,7 +4,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function SignUpForm(props) {
-
   const [name, updateName] = useState("");
   const [dGoal1, updateDGoal1] = useState("");
   const [dGoal2, updateDGoal2] = useState("");
@@ -25,7 +24,7 @@ function SignUpForm(props) {
           DailyGoal3: dGoal3,
           WeeklyGoal1: wGoal1,
           MonthlyGoal1: mGoal1,
-          Coach:[coach],
+          Coach: [coach],
         },
       },
       {
@@ -36,7 +35,7 @@ function SignUpForm(props) {
       }
     );
     ///needed to pass these using props. beause needed on both component pages.
-    props.updateFetchClients(!props.fetchClients); 
+    props.updateFetchClients(!props.fetchClients);
     updateDGoal1("");
     updateDGoal2("");
     updateDGoal3("");
@@ -45,7 +44,6 @@ function SignUpForm(props) {
     updateName("");
     updateCoach("");
   };
-
 
   //Create Form
   return (

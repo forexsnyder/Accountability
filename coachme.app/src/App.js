@@ -9,16 +9,14 @@ import ModifyGoals from "./ModifyGoals";
 import { Route } from "react-router-dom";
 
 function App() {
-const[fetchClients,updateFetchClients] = useState(false)
+  const [fetchClients, updateFetchClients] = useState(false);
 
   return (
     <div className="App">
       <div>
         <Route path="/" component={Login} exact />
         <Route path="/which">
-          <Which
-            fetchClients={fetchClients}
-          />
+          <Which fetchClients={fetchClients} />
         </Route>
         <Route path="/signupform/">
           <SignUpForm
@@ -27,20 +25,16 @@ const[fetchClients,updateFetchClients] = useState(false)
           />
         </Route>
         <Route path="/clientlandingpage/:id">
-          <ClientHomepage
-          
-          />
+          <ClientHomepage />
         </Route>
         <Route path="/coachlandingpage/:id">
           <CoachHomepage />
         </Route>
         <Route path="/modifygoals">
-          <ModifyGoals
-          />
+          <ModifyGoals />
         </Route>
         {/* Modify Goals */}
         {/* Appointments */}
-
       </div>
     </div>
   );
