@@ -15,7 +15,7 @@ function SignUpForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await axios.patch(
+    const data = await axios.post(
       "https://api.airtable.com/v0/appiY6zW8rQRwC3qa/Clients",
       {
         fields: {

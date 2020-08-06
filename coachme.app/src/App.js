@@ -28,7 +28,7 @@ const[fetchClients,updateFetchClients] = useState(false)
         </Route>
         <Route path="/clientlandingpage/:id">
           <ClientHomepage
-          clientId={clientId}
+          
           />
         </Route>
         <Route path="/coachlandingpage/:id">
@@ -36,7 +36,6 @@ const[fetchClients,updateFetchClients] = useState(false)
         </Route>
         <Route path="/modifygoals">
           <ModifyGoals
-          clientId={clientId}
           />
         </Route>
         {/* Modify Goals */}
