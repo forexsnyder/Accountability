@@ -11,12 +11,12 @@ function ClientHomepage(props) {
   const [wgoal1, updateWGoal1] = useState("");
   const [mgoal1, updateMGoal1] = useState("");
   const [clientId, updateClientId] = useState("");
-  const [dg1, upDateDg1] = useState(false);
-  const [dg2, upDateDg2] = useState(false);
-  const [dg3, upDateDg3] = useState(false);
-  const [wg1, upDateWg1] = useState(false);
-  const [mg1, upDateMg1] = useState(false);
-  const [showModify, updateShowModify] = useState(false);
+  const [dg1, upDateDg1] = useState();
+  const [dg2, upDateDg2] = useState();
+  const [dg3, upDateDg3] = useState();
+  const [wg1, upDateWg1] = useState();
+  const [mg1, upDateMg1] = useState();
+  const [showModify, updateShowModify] = useState();
   const params = useParams();
   console.log(params);
 
@@ -158,24 +158,24 @@ function ClientHomepage(props) {
       <div className="goals-box">
         <h1>Client Home page</h1>
         <h2>Monthly Goal:{mgoal1} </h2>
-        <button onClick={(e) => handleClick5(upDateMg1(!mg1))}>
+        <button className={mg1 ? "buttonTrue":"buttonFalse"}onClick={(e) => handleClick5(upDateMg1(!mg1))}>
           Completed
         </button>
         <h2>Weekly Goal:{wgoal1}</h2>
-        <button onClick={(e) => handleClick4(upDateWg1(!wg1))}>
+        <button className={wg1 ? "buttonTrue":"buttonFalse"}onClick={(e) => handleClick4(upDateWg1(!wg1))}>
           Completed
         </button>
         <h3>Daily Goals:</h3>
         <h1>{dgoal1}</h1>
-        <button onClick={(e) => handleClick(upDateDg1(!dg1))}>
+        <button className={dg1 ? "buttonTrue":"buttonFalse"}onClick={(e) => handleClick(upDateDg1(!dg1))}>
           Test Completed
         </button>
         <h1>{dgoal2}</h1>
-        <button onClick={(e) => handleClick2(upDateDg2(!dg2))}>
+        <button className={dg2 ? "buttonTrue":"buttonFalse"}onClick={(e) => handleClick2(upDateDg2(!dg2))}>
           Completed
         </button>
         <h1>{dgoal3}</h1>
-        <button onClick={(e) => handleClick3(upDateDg3(!dg3))}>
+        <button className={dg3 ? "buttonTrue":"buttonFalse"} onClick={(e) => handleClick3(upDateDg3(!dg3))}>
           Completed
         </button>
         <div className="time-frame">

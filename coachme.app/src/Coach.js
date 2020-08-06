@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./Landingpage.css";
 
 function CoachHomepage(props) {
   const [client, updateClient] = useState([]);
@@ -9,11 +10,11 @@ function CoachHomepage(props) {
   const [dgoal3, updateDGoal3] = useState([]);
   const [wgoal1, updateWGoal1] = useState([]);
   const [mgoal1, updateMGoal1] = useState([]);
-  const [dGCompleted1, updateDGCompleted1] = useState([]);
-  const [dGCompleted2, updateDGCompleted2] = useState([]);
-  const [dGCompleted3, updateDGCompleted3] = useState([]);
-  const [wCompleted, updateWCompleted] = useState([]);
-  const [mCompleted, updateMCompleted] = useState([]);
+  // const [dGCompleted1, updateDGCompleted1] = useState([]);
+  // const [dGCompleted2, updateDGCompleted2] = useState([]);
+  // const [dGCompleted3, updateDGCompleted3] = useState([]);
+  // const [wCompleted, updateWCompleted] = useState([]);
+  // const [mCompleted, updateMCompleted] = useState([]);
   const params = useParams();
 
   useEffect(() => {
@@ -33,12 +34,12 @@ function CoachHomepage(props) {
       updateDGoal3(client.data.fields.DGoal3);
       updateWGoal1(client.data.fields.WGoal);
       updateMGoal1(client.data.fields.MGoal);
-      updateDGCompleted1(client.data.fields.DGCompleted1);
-      updateDGCompleted2(client.data.fields.DGCompleted2);
-      updateDGCompleted3(client.data.fields.DGCompleted3);
-      updateWCompleted(client.data.fields.WCompleted);
-      updateMCompleted(client.data.fields.MCompleted);
-      console.log(dgoal1);
+      // updateDGCompleted1(client.data.fields.DGCompleted1);
+      // updateDGCompleted2(client.data.fields.DGCompleted2);
+      // updateDGCompleted3(client.data.fields.DGCompleted3);
+      // updateWCompleted(client.data.fields.WCompleted);
+      // updateMCompleted(client.data.fields.MCompleted);
+    
     };
     apiCall2();
   }, []);
@@ -56,17 +57,17 @@ function CoachHomepage(props) {
                   <div>
                     {client[i]}
                     <h1>Monthly Goal:{mgoal1[i]}</h1>
-                    <button>{mCompleted}</button>
+                    
                     <h2>Weekly Goal: {wgoal1[i]}</h2>
-                    <button>{wCompleted}</button>
+                    
                     <h3>
                       Daily Goals:
                       {dgoal1[i]}
-                      <button>{dGCompleted1}</button>
+                      
                       {dgoal2[i]}
-                      <button>{dGCompleted2}</button>
+                      
                       {dgoal3[i]}
-                      <button>{dGCompleted3}</button>
+                      
                     </h3>
                   </div>
                 );

@@ -5,3 +5,14 @@
   justify-items: center;
   column-gap: 20px;
 }
+
+.buttonTrue{
+  background-color: green;
+  color:black;
+
+}
+
+.buttonFalse{
+  background-color: grey;
+
+}
