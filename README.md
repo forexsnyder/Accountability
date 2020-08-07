@@ -54,3 +54,7 @@ Daily Schedule:
 
 
 ![Wireframe](https://github.com/forexsnyder/Accountability/blob/master/Images/Daily%20schedule.png)
+
+Changelog:
+1. Removed Daily, Weekly, Monthly pages, easier for the user to fill everything out on a signle page.
+2. Removed Coach update function, need a different data base to have live updates.
