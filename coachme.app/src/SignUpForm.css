@@ -7,9 +7,9 @@
       border:black;
       border-style: solid;
       margin:auto;
-      width: 1400px;
+      width: 1500px;
       background-color: rgb(101, 144, 194);
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -32,7 +32,7 @@
     }
 
     .box-div{
-      width: 600px;
+      width: 900px;
       background-color: rgb(184, 179, 179);
       margin:1em;
       padding:1em;
@@ -88,13 +88,13 @@
       margin:auto;
       width:900px;
       background-color: red;
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       font-size: 2em;
-      color:rgb(175, 42, 187);
+      color:black;
     }
   
     img {
@@ -122,13 +122,13 @@
     row-gap: 6px;
     }
     .label-div{
-        width:200px;
-        height: 150px;
+    width:200px;
+    height: 150px;
     margin: auto;
     border: black;
     border-style: solid;
     padding:2%;
-    font-size:0.75em ;
+    font-size:1em ;
     }
     .menu{
     padding:2%;
@@ -153,7 +153,7 @@
       margin:auto;
       width:500px;
       background-color: yellow;
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -180,7 +180,7 @@
   
     }
     .box-div{
-      width: 400px;
+      width: 300px;
       background-color: bisque;
       margin:1em;
       padding:1em;
@@ -198,7 +198,7 @@
       border: black;
       border-style: solid;
       padding:2%;
-      font-size:.5em ;
+      font-size:.75em ;
       }
       .menu{
         border:black;
@@ -225,6 +225,5 @@
       .title{
           font-size:.5em;
       }
-  
   
   }
