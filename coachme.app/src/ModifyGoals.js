@@ -143,9 +143,9 @@ function ModifyGoals(props) {
   return (
     <div className="main">
       <header>Update Your Goals</header>
-      <div className=".box-div">
-        <div classname="label-div">
-        <form  onSubmit={handleSubmit}>
+    
+        <div >
+        <form classname="label-div" onSubmit={handleSubmit}>
         <label htmlFor="daily-goal1">Your first Daily Goal</label>
         <input
           type="Text"
@@ -155,8 +155,8 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
-      </div>
-      <div classname="label-div">
+      
+      
       <form  onSubmit={handleSubmit2}>
         <label htmlFor="daily-goal2">Your second Daily Goal</label>
         <input
@@ -167,12 +167,9 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
+      
 
-
-      </div>
-
-
-      <div classname="label-div">
+      
       <form  onSubmit={handleSubmit3}>
         <label htmlFor="daily-goal3">Your third Daily Goal</label>
         <input
@@ -183,8 +180,9 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
-      </div>
-      <div className="label-div">
+
+      
+      
       <form  onSubmit={handleSubmit4}>
         <label htmlFor="weekly-goal2">Your Weekly Goal</label>
         <input
@@ -195,8 +193,9 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
-      </div>
-      <div classname="label-div">
+
+      
+      
       <form  onSubmit={handleSubmit5}>
         <label htmlFor="monthly-goal1">Your Monthly Goal</label>
         <input
@@ -207,7 +206,7 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
-      </div>
+      
 
       </div>
 </div>

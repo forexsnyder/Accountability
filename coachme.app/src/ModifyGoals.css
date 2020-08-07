@@ -9,19 +9,21 @@
       margin:auto;
       width: 1400px;
       background-color: rgb(101, 144, 194);
-      min-height: 100vh;
+      min-height: 700px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 3em;
+      font-size: 1em;
       color:rgb(175, 42, 187);
     }
-  
+  header{
+      font-size: 40px;
+  }
 
     .box-div{
-      width: 600px;
-      background-color: rgb(184, 179, 179);
+      width: 1400px;
+      background-color:grey;
       margin:1em;
       padding:1em;
       display: grid;
@@ -31,6 +33,7 @@
       border-style: solid;
       column-gap: 10px;
       row-gap: 10px;
+      font-size: .8em;
       }
   
       .label-div{
@@ -51,18 +54,18 @@
       border-style: solid;
       margin:auto;
       width:900px;
-      background-color: red;
-      min-height: 100vh;
+      background-color: grey;
+      min-height: 600px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 2em;
+      font-size: 1em;
       color:rgb(175, 42, 187);
     }
     .box-div{
     width: 500px;
-    background-color: bisque;
+    background-color: grey;
     margin:1em;
     padding:1em;
     display: grid;
@@ -92,12 +95,12 @@
       margin:auto;
       width:500px;
       background-color: rgb(184, 179, 179);
-      min-height: 600px;
+      min-height: 500px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 1.5em;
+      font-size: .75em;
       color:rgb(175, 42, 187);
     }
     header{
@@ -106,7 +109,7 @@
     }
     .box-div{
       width: 200px;
-      background-color: bisque;
+      background-color: grey;
       margin:1em;
       padding:1em;
       display: grid;

@@ -74,13 +74,7 @@ function CoachHomepage(props) {
                         {dgoal3[i]}
                         </div>
                       </div>
-                  
-                      
-        
-                     
-                      
-                    
-                      
+
                     </p>
                   </div>
                 );
