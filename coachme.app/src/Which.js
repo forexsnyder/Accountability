@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, Route } from "react-router-dom";
 import './Login.css';
 import axios from "axios";
-import DailyGoals from './Daily';
+// import DailyGoals from './Daily';
 
 function Which(props) {
   const [clients, updateClients] = useState([]);
@@ -44,7 +44,7 @@ function Which(props) {
   return (
     <div className="App">
         <h1>Are you a Coach or a Client?</h1>
-      <div>
+      <div className="client-div">
         <h1>Clients</h1>
         {clients.map((client) => {
           return (
