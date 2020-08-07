@@ -1,17 +1,23 @@
-body {
-  background-color: grey;
-}
+
 
 @media (min-width: 1440px) {
+  html,body{
+    margin:0;
+    padding:0;
+  }
   .login {
-    background-color: blue;
+    border:black;
+    border-style: solid;
+    margin:auto;
+    width: 1400px;
+    background-color: rgb(101, 144, 194);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 3em;
-    color: white;
+    color:rgb(175, 42, 187);
   }
 
   img {
@@ -26,10 +32,40 @@ body {
   .link {
     margin: 12px;
   }
+  .client-div{
+    width: 600px;
+    background-color: rgb(184, 179, 179);
+    margin:1em;
+    padding:1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: black;
+    border-style: solid;
+    column-gap: 10px;
+    row-gap: 10px;
+    }
+
+    .client-box{
+      margin: auto;
+      border: black;
+      border-style: solid;
+      padding:2%;
+
+    }
+    header{
+      font-size: 1.5em;
+      font-weight: bolder;
+      padding:2%;
+      color:rgb(175, 42, 187); 
+    }
 }
 
 @media (max-width: 1439px) {
   .login {
+    border:black;
+    border-style: solid;
+    margin:auto;
+    width:900px;
     background-color: red;
     min-height: 100vh;
     display: flex;
@@ -52,9 +88,38 @@ body {
   .link {
     margin: 12px;
   }
+  .client-div{
+  width: 500px;
+  background-color: bisque;
+  margin:1em;
+  padding:1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: black;
+  border-style: solid;
+  column-gap: 6px;
+  row-gap: 6px;
+  }
+  .client-box{
+  margin: auto;
+  border: black;
+  border-style: solid;
+  padding:2%;
+  font-size:.75 ;
+  }
+  header{
+  padding:2%;
+  }
+
+
+
 }
 @media (max-width: 768px) {
   .login {
+    border:black;
+    border-style: solid;
+    margin:auto;
+    width:500px;
     background-color: yellow;
     min-height: 100vh;
     display: flex;
@@ -77,4 +142,33 @@ body {
   .link {
     margin: 12px;
   }
+  header{
+    padding:2%;
+
+
+  }
+  .client-div{
+    width: 300px;
+    background-color: bisque;
+    margin:1em;
+    padding:1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: black;
+    border-style: solid;
+    column-gap: 3px;
+    row-gap: 3px;
+    }
+    .client-box{
+    margin: auto;
+    border: black;
+    border-style: solid;
+    padding:2%;
+    font-size:.75 ;
+    }
+    header{
+    
+    }
+
+
 }

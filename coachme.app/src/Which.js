@@ -42,27 +42,33 @@ function Which(props) {
   }, []);
 
   return (
-    <div className="App">
-        <h1>Are you a Coach or a Client?</h1>
+    <div className="login">
+        <header>Are you a Coach or a Client?</header>
+        <h2>Clients</h2>
       <div className="client-div">
-        <h1>Clients</h1>
         {clients.map((client) => {
           return (
             <Link to={`/clientlandingpage/${client.id}`}>
-              <h2>{client.fields.Name}</h2>
+             <div className="client-box">
+             <h3>{client.fields.Name}</h3>
+             </div>             
             </Link>
           );
         })}
       </div>
       <div>
-        <h1>Coaches</h1>
+        <h2>Coaches</h2>
+        <div className="client-div">
         {coaches.map((coach) => {
           return (
             <Link to={`/coachlandingpage/${coach.id}`}>
-              <h2>{coach.fields.Name}</h2>
+              <div className="client-box">
+              <h3>{coach.fields.Name}</h3>
+              </div>            
             </Link>
           );
         })}
+        </div>
       </div>
     </div>
   );
