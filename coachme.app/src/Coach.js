@@ -46,29 +46,42 @@ function CoachHomepage(props) {
   //for loop
   if (wgoal1 !== []) {
     return (
-      <div className="App">
+      <div className="big-div">
+        <h3>Coach Home page</h3>
         <div className="goals-box">
-          <h1>Coach Home page</h1>
+          
           <div>
             {(function () {
               let rows = [];
               for (let i = 0; i < client.length; i++) {
                 rows.push(
-                  <div>
+                  <div className="box">
                     {client[i]}
-                    <h1>Monthly Goal:{mgoal1[i]}</h1>
+                    <p>Monthly Goal:{mgoal1[i]}</p>
                     
-                    <h2>Weekly Goal: {wgoal1[i]}</h2>
-                    
-                    <h3>
+                    <p>Weekly Goal: {wgoal1[i]}</p>
+          
+                    <p>
+                      <div>
                       Daily Goals:
+                      <div>
                       {dgoal1[i]}
-                      
+                      </div>
+                      <div>
                       {dgoal2[i]}
+                        </div>
+                        <div>
+                        {dgoal3[i]}
+                        </div>
+                      </div>
+                  
                       
-                      {dgoal3[i]}
+        
+                     
                       
-                    </h3>
+                    
+                      
+                    </p>
                   </div>
                 );
               }

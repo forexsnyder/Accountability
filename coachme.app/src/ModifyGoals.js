@@ -1,6 +1,7 @@
 import React,{ useEffect, useState } from "react";
 import axios from "axios"
 import { Link, useParams } from "react-router-dom";
+import "./ModifyGoals.css"; 
 
 
 function ModifyGoals(props) {
@@ -140,9 +141,11 @@ function ModifyGoals(props) {
   };
   //Create Form
   return (
-    <div>
-      <h2>Update Your Goals</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="main">
+      <header>Update Your Goals</header>
+      <div className=".box-div">
+        <div classname="label-div">
+        <form  onSubmit={handleSubmit}>
         <label htmlFor="daily-goal1">Your first Daily Goal</label>
         <input
           type="Text"
@@ -152,7 +155,9 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
-      <form onSubmit={handleSubmit2}>
+      </div>
+      <div classname="label-div">
+      <form  onSubmit={handleSubmit2}>
         <label htmlFor="daily-goal2">Your second Daily Goal</label>
         <input
           type="Text"
@@ -162,7 +167,13 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
-      <form onSubmit={handleSubmit3}>
+
+
+      </div>
+
+
+      <div classname="label-div">
+      <form  onSubmit={handleSubmit3}>
         <label htmlFor="daily-goal3">Your third Daily Goal</label>
         <input
           type="Text"
@@ -172,7 +183,9 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
-      <form onSubmit={handleSubmit4}>
+      </div>
+      <div className="label-div">
+      <form  onSubmit={handleSubmit4}>
         <label htmlFor="weekly-goal2">Your Weekly Goal</label>
         <input
           type="Text"
@@ -182,7 +195,9 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
-      <form onSubmit={handleSubmit5}>
+      </div>
+      <div classname="label-div">
+      <form  onSubmit={handleSubmit5}>
         <label htmlFor="monthly-goal1">Your Monthly Goal</label>
         <input
           type="Text"
@@ -192,6 +207,9 @@ function ModifyGoals(props) {
         />
         <input type="submit" value="Update Now" />
       </form>
+      </div>
+
+      </div>
 </div>
   );
 }

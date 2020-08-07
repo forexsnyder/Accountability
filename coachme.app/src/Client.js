@@ -154,32 +154,47 @@ function ClientHomepage(props) {
   };
 
   return (
-    <div className="App">
-      <div className="goals-box">
-        <h1>Client Home page</h1>
-        <h2>Monthly Goal:{mgoal1} </h2>
-        <button className={mg1 ? "buttonTrue":"buttonFalse"}onClick={(e) => handleClick5(upDateMg1(!mg1))}>
+    <div className="big-div">
+      <h1>Client Home page</h1>
+      <div className="goals">
+      <div className="goals-div"> 
+        <p>Monthly Goal:{mgoal1} </p>
+          <button className={mg1 ? "buttonTrue":"buttonFalse"}onClick={(e) => handleClick5(upDateMg1(!mg1))}>
           Completed
-        </button>
-        <h2>Weekly Goal:{wgoal1}</h2>
+          </button>
+        </div>
+        <div className="goals-div"> 
+        <p>Weekly Goal:{wgoal1}</p>
         <button className={wg1 ? "buttonTrue":"buttonFalse"}onClick={(e) => handleClick4(upDateWg1(!wg1))}>
           Completed
         </button>
-        <h3>Daily Goals:</h3>
-        <h1>{dgoal1}</h1>
+         </div>
+         <div className="daily-doals-div">
+
+           
+         </div>
+         <div className="goals-div">
+
+         <p>Daily Goals:</p>
+        <p>{dgoal1}</p>
         <button className={dg1 ? "buttonTrue":"buttonFalse"}onClick={(e) => handleClick(upDateDg1(!dg1))}>
-          Test Completed
+          Completed
         </button>
-        <h1>{dgoal2}</h1>
+         </div>
+         <div className="goals-div">
+         <p>{dgoal2}</p>
         <button className={dg2 ? "buttonTrue":"buttonFalse"}onClick={(e) => handleClick2(upDateDg2(!dg2))}>
           Completed
         </button>
-        <h1>{dgoal3}</h1>
+         </div>
+         <div className="goals-div">
+         <p>{dgoal3}</p>
         <button className={dg3 ? "buttonTrue":"buttonFalse"} onClick={(e) => handleClick3(upDateDg3(!dg3))}>
           Completed
         </button>
+         </div>
         <div className="time-frame">
-          <button type="button" onClick={() => updateShowModify(!showModify)}>
+          <button type="modify-button" onClick={() => updateShowModify(!showModify)}>
             Modify Goals
           </button>
           {showModify && <ModifyGoals />}
