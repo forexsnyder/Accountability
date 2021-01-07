@@ -2,14 +2,29 @@ Title:
 Accountability App 
 
 Description:
-Accomplish your goals.  Sign up with a coach to follow up about your goals. Set a monthly goal, then break it in to weekly goals.  Break those weekly goals into three daily actions.  Your coach will see your progress and keep you accountable.  
+Accomplish your goals.  Sets up a group, or have the app push notifications and reminders. Set a monthly goal, then break it in to weekly goals.  Break those weekly goals into three daily actions.  Your coach will see your progress and keep you accountable. Celebrate your accomplishments with your friends by posting your wins.  
 
-Airtable Columns:
+Database Schema:
 
-![Airtable](https://github.com/forexsnyder/Accountability/blob/master/Images/Airtable.png)
+User:string
+Password:string
 
 
-![Apt](https://github.com/forexsnyder/Accountability/blob/master/Images/Apt.png)
+Monthly Goal:string
+Weekly Goal1:string
+Weekly Goal2:string
+Weekly Goal3:string
+Weekly Goal4:string
+Daily Goal1:string
+Daily Goal2:string
+Daily Goal3:string
+
+Coach:string
+Friends:string
+
+Pictures:array
+
+
 
 Wireframe:
 
@@ -18,11 +33,6 @@ Wireframe:
 
 ![Wireframe](https://github.com/forexsnyder/Accountability/blob/master/Images/App%20Diagram.png)
 
-MVP:
-
-Login Page (fake credentials)
-
-Landing Page for clients and managers.
 
 Client:
 
