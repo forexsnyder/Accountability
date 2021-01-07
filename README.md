@@ -7,19 +7,28 @@ Accomplish your goals.  Sets up a group, or have the app push notifications and 
 Database Schema:
 
 User:string
+
 Password:string
 
 
 Monthly Goal:string
+
 Weekly Goal1:string
+
 Weekly Goal2:string
+
 Weekly Goal3:string
+
 Weekly Goal4:string
+
 Daily Goal1:string
+
 Daily Goal2:string
+
 Daily Goal3:string
 
 Coach:string
+
 Friends:string
 
 Pictures:array
